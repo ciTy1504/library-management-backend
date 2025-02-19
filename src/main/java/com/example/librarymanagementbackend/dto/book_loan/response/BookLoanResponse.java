@@ -1,0 +1,25 @@
+package com.example.librarymanagementbackend.dto.book_loan.response;
+
+import com.example.librarymanagementbackend.constants.BookLoanStatus;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
+
+import java.util.Date;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@FieldDefaults(level = AccessLevel.PRIVATE)
+public class BookLoanResponse {
+    String id;
+    String bookCopyId;
+    String userId;
+    String userName;
+    Date loanDate;
+    Date returnDate;
+    Date actualReturnDate;
+    BookLoanStatus status;
+    String bookTitle;
+    String bookRequestId;
+}

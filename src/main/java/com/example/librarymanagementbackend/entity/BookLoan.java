@@ -51,19 +51,20 @@ public class BookLoan {
 
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
-    Date CreatedAt;
+    Date createdAt;
+
     @UpdateTimestamp
     @Temporal(TemporalType.TIMESTAMP)
-    Date UpdatedAt;
+    Date updatedAt;
 
     @PrePersist
     protected void onCreate() {
-        CreatedAt = new Date();
-        UpdatedAt = new Date();
+        createdAt = new Date();
+        updatedAt = new Date();
     }
 
     @PreUpdate
     protected void onUpdate() {
-        UpdatedAt = new Date();
+        updatedAt = new Date();
     }
 }
